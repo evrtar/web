@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ručak</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  
+  background-color:gray;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header {
+    text-align: center;
+    padding: 30px;
+    font-size: 15px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: normal;
+    color:grey;
+    background-color:lightgrey;
+    text-decoration: none;
+
+}
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.column {
+  -ms-flex: 50%; 
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+<div class="header" id="myHeader">
+  <h1>RUČAK</h1>
+  <p>U nastavku se nalazi nekoliko ideja za Vaš ručak.</p>
+  
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+
+<div class="row"> 
+  <div class="column">
+    <img src="pictures/rucak1.jpg" style="width:100%">
+    <img src="pictures/rucak2.jpg" style="width:100%">
+    <img src="pictures/rucak3.jpg" style="width:100%">
+    <img src="pictures/rucak4.jpg" style="width:100%">
+    <img src="pictures/rucak5.jpg" style="width:100%">
+    <img src="pictures/rucak6.jpg" style="width:100%">
+    <img src="pictures/rucak7.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="pictures/rucak8.jpg" style="width:100%">
+    <img src="pictures/rucak9.jpg" style="width:100%">
+    <img src="pictures/rucak10.jpg" style="width:100%">
+    <img src="pictures/rucak11.jpg" style="width:100%">
+    <img src="pictures/rucak12.jpg" style="width:100%">
+    <img src="pictures/rucak13.jpg" style="width:100%">
+    <img src="pictures/rucak5.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="pictures/rucak14.jpg" style="width:100%">
+    <img src="pictures/rucak15.jpg" style="width:100%">
+    <img src="pictures/rucak16.jpg" style="width:100%">
+    <img src="pictures/rucak17.jpg" style="width:100%">
+    <img src="pictures/rucak18.jpg" style="width:100%">
+    <img src="pictures/rucak19.jpg" style="width:100%">
+    <img src="pictures/rucak20.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="pictures/rucak18.jpg" style="width:100%">
+    <img src="pictures/rucak20.jpg" style="width:100%">
+    <img src="pictures/rucak10.jpg" style="width:100%">
+    <img src="pictures/rucak15.jpg" style="width:100%">
+    <img src="pictures/rucak19.jpg" style="width:100%">
+    <img src="pictures/rucak13.jpg" style="width:100%">
+    <img src="pictures/rucak7.jpg" style="width:100%">
+  </div> 
+  
+</div>
+
+<script>
+
+var elements = document.getElementsByClassName("column");
+
+
+var i;
+
+
+
+
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  
+    elements[i].style.flex = "50%";
+  }
+}
+
+
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  
+    elements[i].style.flex = "25%";
+  }
+}
+
+
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

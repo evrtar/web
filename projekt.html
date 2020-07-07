@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator zdravlja-zdrav način života!</title>
+    <link rel="stylesheet" type="text/css" href="health.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+ 
+    
+
+<body class="body">
+     <div class="navbar">
+            <a  class="active" href="#naslovnica">NASLOVNICA</a>
+            <a href="prehrana.html" >PREHRANA</a>
+             <a href="kontakt.html">KONTAKT</a>
+             <a href="vijesti.html">VIJESTI</a>
+    </div>
+    
+    <h1 class="Title">Kalkulator zdravlja</h1>
+
+  
+    <div class="grid-container">
+        <div class="item1" >
+                <img src="pictures/voda.jpg" width="250px" >
+                <h3 class="naslov">DNEVNI UNOS TEKUĆINE</h3>
+                <p class="recenica">Za muškarce 3,0L(oko 13 čaša od oko 2,3-2,4dL),
+                    a za žene 2,2L(oko 9 čaša od oko 2,3-2,4dL).</p>
+            </div>
+            <div class="item2">
+              <img src="pictures/meso.jpg" width="250px" >
+              <h3 class="naslov">MESO U PREHRANI</h3>
+              <p class="recenica">Meso je bogato proteinima,esencijalnim aminokiselinama i vitaminima B skupine.</p>
+            </div>
+            <div class="item3">
+              <img src="pictures/povrce.jpg" width="250px" >
+              <h3 class="naslov">POVRĆE</h3>
+              <p class="recenica">Uz to što je bogato vitaminima, mineralima i drugim fitonutrijentima,
+              osobito izoflavonoidima kao jakim antioksidansima, povrće je golem izvor energije. </p>
+            </div>
+            <div class="item4">
+                <img src="pictures/trcanje.jpg" width="250px">
+                <h3 class="naslov">AKTIVAN NAČIN ŽIVOTA</h3>
+                <p class="recenica">Redovita tjelovježba nam pomože poboljšati rad srca i regulirati krvni tlak.
+                 Poboljšava metabolične funkcije za kontroliranje tjelesne težine.</p>
+             </div>
+            
+
+     </div>
+       
+        
+        
+       <div class="grid-container2">
+            <div class="description">
+                <p class="opis"><strong>Zdravlje</strong> se određuje (definira) kao visoki stupanj opće funkcionalnosti organizma, odnosno nenarušenost funkcionalnosti organizma, harmonija i nenarušenost intelektualnih i bioloških funkcija. Također se, u proširenom smislu može promatrati kao stanje dobrog tjelesnog, psihičkog i društvenog blagostanja. Zdravlje se najčešće upotrebljava kao pojam odsustva od bolesti, traume (ozljede i njihovih posljedica), deformacija i duševnih poremećaja. Neki od uvjeta zdravlja su:</p>
+                <ol >
+                    <li class="opis">uravnotežena prehrana</li>
+                    <li class="opis">tjelesna aktivnost</li>
+                    <li class="opis">higijena</li>
+                    <li class="opis">stabilne obiteljske okolnosti</li>
+                    <li class="opis">stabilne društvene okolnosti</li>
+
+                </ol> 
+            </div>
+
+
+        
+             
+            <div clas="slide">
+                    <img class="mySlides" src="pictures/image1.jpg"
+                    width="300px"display="block">
+                    <img class="mySlides" src="pictures/image2.jpg"
+                    width="300px" display="block">
+                    <img class="mySlides" src="pictures/image3.jpg"
+                    width="300px" display="block">
+                    <img class="mySlides" src="pictures/image4.jpg"
+                    width="300px" display="block">
+                    <img class="mySlides" src="pictures/image5.jpg"
+                    width="300px" display="block">
+                    <img class="mySlides" src="pictures/image6.jpg"
+                    width="300px" display="block">
+                    <img class="mySlides" src="pictures/image7.jpg"
+                    width="300px" display="block"> 
+                </div>
+                
+
+            </div>
+            
+
+
+        
+        <script>
+         
+            var myIndex = 0;
+            carousel();
+
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                myIndex++;
+                if (myIndex > x.length) { myIndex = 1 }
+                x[myIndex - 1].style.display = "block";
+                setTimeout(carousel, 1000);
+            }
+
+    </script>
+
+
+<footer class="footer">
+    <i class="fa fa-facebook-official health-hover-opacity"></i>
+    <i class="fa fa-instagram health-hover-opacity"></i>
+    <i class="fa fa-snapchat health-hover-opacity"></i>
+    <i class="fa fa-pinterest-p health-hover-opacity"></i>
+    <i class="fa fa-twitter health-hover-opacity"></i>
+    <i class="fa fa-linkedin health-hover-opacity"></i>
+    
+  </footer>
+
+
+    
+
+
+
+
+
+
+</body>
+</html>

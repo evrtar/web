@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    background-image: url('pictures/background.jpg');
+    background-size: cover;
+}
+HEADER{
+background-color:whitesmoke;
+margin:0;
+text-align:right;
+}
+.Title{
+    font-size: 50px;
+	padding : 5px;
+	text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: normal;
+    color: antiquewhite;
+    background-color: black;
+    text-decoration: none;
+}
+.navbar{
+    
+    width: 100%;
+    line-height: 25px;
+    background-color:whitesmoke;
+    position: fixed;
+    top: 0;
+}
+.navbar a{
+   float: left;
+    width: 20%;
+    text-align:center;
+    padding: 10px 5px;
+    color:black;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-family: "Inconsolata",sens-serif;
+}
+
+.navbar a:hover{
+      background-color:grey ;
+
+}
+.navbar a.active {
+    background-color:grey;
+    color: ghostwhite;
+}
+.grid-container{
+      display:grid;
+      margin:0;
+      grid-template:'header header header header';
+      margin-left: 80px;
+      grid-gap:10px;
+      
+}
+.naslov{
+      font-family: "Inconsolata",sens-serif;
+       text-shadow:1px 1px 0 whitesmoke;
+       font-size: x-large;
+}
+.recenica{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',  Verdana, sans-serif;
+   letter-spacing:0;
+   text-align: auto;
+   display: table-row;
+   font-size: 10;
+   font-weight: 200;
+}
+.grid-container2{
+    display:grid;
+    margin:0;
+    grid-template:'footer footer';
+    width: auto;
+    height:480px;
+    background-color:#3337;
+}
+.description{
+    float: center;
+    height:400px;
+    width:700px;
+    margin-left: 100px;
+    margin-top: 40px ;
+}
+.opis{
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode',  Verdana, sans-serif;
+    letter-spacing: 0;
+    font-weight: normal;
+    color: lightgray;
+}
+
+.slide{
+    float: right;  
+}
+footer{
+    display:block;
+   background-color:black;
+    text-align: center;
+   font-size: x-large;
+   height: 60px;
+}
+.footer:hover{
+    background-color: rgb(158, 145, 167);
+}
+.footer i{
+    color:whitesmoke;
+    margin-top: 15px;  
+}
+.footer i:hover{
+    background-color: lightgray;
+    opacity: 0.8;
+}

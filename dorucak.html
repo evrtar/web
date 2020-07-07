@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doručak</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  
+  background-color:gray;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header {
+    text-align: center;
+    padding: 30px;
+    font-size: 15px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: normal;
+    color:grey;
+    background-color:lightgrey;
+    text-decoration: none;
+
+}
+
+.row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  -ms-flex: 50%; 
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+<div class="header" id="myHeader">
+  <h1>DORUČAK</h1>
+  <p>U nastavku se nalazi nekoliko ideja za Vaš doručak.</p>
+  
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">4</button>
+</div>
+
+
+<div class="row"> 
+  <div class="column">
+    <img src="pictures/dorucak1.jpg" style="width:100%">
+    <img src="pictures/dorucak2.jpg" style="width:100%">
+    <img src="pictures/dorucak3.jpg" style="width:100%">
+    <img src="pictures/dorucak4.jpg" style="width:100%">
+    <img src="pictures/dorucak5.jpg" style="width:100%">
+    <img src="pictures/dorucak6.jpg" style="width:100%">
+    <img src="pictures/dorucak7.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="pictures/dorucak8.jpg" style="width:100%">
+    <img src="pictures/dorucak9.jpg" style="width:100%">
+    <img src="pictures/dorucak10.jpg" style="width:100%">
+    <img src="pictures/sendvic11.jpg" style="width:100%">
+    <img src="pictures/dorucak12.jpg" style="width:100%">
+    <img src="pictures/dorucak13.jpg" style="width:100%">
+    <img src="pictures/dorucak5.jpg" style="width:100%">
+  </div>  
+  <div class="column">
+    <img src="pictures/dorucak14.jpg" style="width:100%">
+    <img src="pictures/dorucak15.jpg" style="width:100%">
+    <img src="pictures/dorucak16.jpg" style="width:100%">
+    <img src="pictures/dorucak17.jpg" style="width:100%">
+    <img src="pictures/dorucak18.jpg" style="width:100%">
+    <img src="pictures/dorucak19.jpg" style="width:100%">
+    <img src="pictures/dorucak20.jpg" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="pictures/dorucak18.jpg" style="width:100%">
+    <img src="pictures/dorucak4.jpg" style="width:100%">
+    <img src="pictures/dorucak13.jpg" style="width:100%">
+    <img src="pictures/sendvic1.jpg" style="width:100%">
+    <img src="pictures/dorucak20.jpg" style="width:100%">
+    <img src="pictures/dorucak11.jpg" style="width:100%">
+    <img src="pictures/dorucak7.jpg" style="width:100%">
+  </div> 
+  
+</div>
+
+<script>
+
+var elements = document.getElementsByClassName("column");
+
+var i;
+
+
+
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  
+    elements[i].style.flex = "50%";
+  }
+}
+
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  
+    elements[i].style.flex = "25%";
+  }
+}
+
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>
